@@ -1,0 +1,1 @@
+/home/almir/m2TestUpdate/vendor/magento/module-captcha/view/frontend/web/js/view/checkout/loginCaptcha.js

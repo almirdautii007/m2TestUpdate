@@ -1,0 +1,1 @@
+/home/almir/m2TestUpdate/vendor/magento/module-tax/view/frontend/web/js/view/checkout/minicart/subtotal/totals.js

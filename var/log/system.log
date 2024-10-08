@@ -5,3 +5,70 @@
 [2024-10-08T12:50:00.510539+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
 [2024-10-08T12:50:00.510632+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
 [2024-10-08T12:50:00.510722+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T12:51:02.076413+00:00] main.ERROR: The "/home/almir/m2TestUpdate/var/tmp/alternative-source-css.lock" file can't be deleted.  [] []
+[2024-10-08T12:51:02.076897+00:00] main.CRITICAL: The "/home/almir/m2TestUpdate/var/tmp/alternative-source-css.lock" file can't be deleted.  [] []
+[2024-10-08T12:58:29.417489+00:00] main.ERROR: The contents from the "/home/almir/m2TestUpdate/app/code/Scandiweb/Test/etc/module.xml" file can't be read. Warning!file_get_contents(/home/almir/m2TestUpdate/app/code/Scandiweb/Test/etc/module.xml): Failed to open stream: No such file or directory
+#0 /home/almir/m2TestUpdate/vendor/magento/framework/Module/ModuleList/Loader.php(132): Magento\Framework\Filesystem\Driver\File->fileGetContents()
+#1 /home/almir/m2TestUpdate/vendor/magento/framework/Module/ModuleList/Loader.php(92): Magento\Framework\Module\ModuleList\Loader->getModuleConfigs()
+#2 /home/almir/m2TestUpdate/vendor/magento/framework/Module/FullModuleList.php(46): Magento\Framework\Module\ModuleList\Loader->load()
+#3 /home/almir/m2TestUpdate/vendor/magento/framework/Module/FullModuleList.php(66): Magento\Framework\Module\FullModuleList->getAll()
+#4 /home/almir/m2TestUpdate/setup/src/Magento/Setup/Console/Command/ModuleStatusCommand.php(99): Magento\Framework\Module\FullModuleList->getNames()
+#5 /home/almir/m2TestUpdate/setup/src/Magento/Setup/Console/Command/ModuleStatusCommand.php(63): Magento\Setup\Console\Command\ModuleStatusCommand->showSpecificModule()
+#6 /home/almir/m2TestUpdate/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\ModuleStatusCommand->execute()
+#7 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run()
+#8 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand()
+#9 /home/almir/m2TestUpdate/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun()
+#10 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun()
+#11 /home/almir/m2TestUpdate/bin/magento(23): Symfony\Component\Console\Application->run()
+#12 {main} [] []
+[2024-10-08T13:21:49.802669+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:21:49.802926+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:21:49.803143+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:21:49.803297+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:21:49.803435+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:21:49.803558+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.777825+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.778182+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.778357+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.778463+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.778547+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:06.778649+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.343918+00:00] main.INFO: Broken reference: the 'tracking' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344160+00:00] main.INFO: Broken reference: the 'notification_area' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344298+00:00] main.INFO: Broken reference: the 'unread_system_messages' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344426+00:00] main.INFO: Broken reference: the 'notification_window' element cannot be added as child to 'notifications', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344548+00:00] main.INFO: Broken reference: the 'notification.messages' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344686+00:00] main.INFO: Broken reference: the 'global_notices' element cannot be added as child to 'global.notices', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344804+00:00] main.INFO: Broken reference: the 'logo' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.344924+00:00] main.INFO: Broken reference: the 'global.search' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345043+00:00] main.INFO: Broken reference: the 'user' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345162+00:00] main.INFO: Broken reference: the 'menu' element cannot be added as child to 'page.menu', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345281+00:00] main.INFO: Broken reference: the 'breadcrumbs' element cannot be added as child to 'page.breadcrumbs', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345399+00:00] main.INFO: Broken reference: the 'formkey' element cannot be added as child to 'page.formkey', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345516+00:00] main.INFO: Broken reference: the 'page.title' element cannot be added as child to 'main.top', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345655+00:00] main.INFO: Broken reference: the 'messages' element cannot be added as child to 'page.messages', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345774+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' element cannot be added as child to 'page.main.actions', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.345901+00:00] main.INFO: Broken reference: the 'legal' element cannot be added as child to 'footer', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.346068+00:00] main.INFO: Broken reference: the 'header.inner.left' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.346181+00:00] main.INFO: Broken reference: the 'header.inner.right' element cannot be added as child to 'header', because the latter doesn't exist [] []
+[2024-10-08T13:24:08.346340+00:00] main.INFO: Broken reference: the 'user' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.346453+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.346570+00:00] main.INFO: Broken reference: the 'logo' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.346714+00:00] main.INFO: Broken reference: the 'global.search' tries to reorder itself towards 'logo', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.346830+00:00] main.INFO: Broken reference: the 'page.actions.toolbar' tries to reorder itself towards '', but their parents are different: 'page.main.actions' and '' respectively. [] []
+[2024-10-08T13:24:08.346967+00:00] main.INFO: Broken reference: the 'header.inner.left' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.347077+00:00] main.INFO: Broken reference: the 'header.inner.right' tries to reorder itself towards 'header.inner.left', but their parents are different: 'header' and '' respectively. [] []
+[2024-10-08T13:24:08.347204+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and '' respectively. [] []
+[2024-10-08T13:24:09.291026+00:00] main.ERROR: The "/home/almir/m2TestUpdate/var/tmp/alternative-source-css.lock" file can't be deleted.  [] []
+[2024-10-08T13:24:09.291279+00:00] main.CRITICAL: The "/home/almir/m2TestUpdate/var/tmp/alternative-source-css.lock" file can't be deleted.  [] []
+[2024-10-08T13:24:34.223599+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and 'header' respectively. [] []
+[2024-10-08T13:24:42.965202+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header.inner.right' and 'header' respectively. [] []
+[2024-10-08T13:30:33.385053+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:33.385439+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:33.385680+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:33.385798+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:33.385894+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:33.385975+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:41.623447+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:41.624079+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-08T13:30:41.624412+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
