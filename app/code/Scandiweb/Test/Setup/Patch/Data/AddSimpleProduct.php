@@ -1,5 +1,4 @@
 <?php
-
 namespace Scandiweb\Test\Setup\Patch\Data;
 
 use Magento\Framework\Setup\Patch\DataPatchInterface;
