@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <orderEntry type="inheritedJdk"/>
+    <orderEntry type="sourceFolder" forTest="false"/>
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/var/view_preprocessed"/>
+      <excludeFolder url="file://$MODULE_DIR$/var/composer_home"/>
+      <excludeFolder url="file://$MODULE_DIR$/var/log"/>
+      <excludeFolder url="file://$MODULE_DIR$/var/page_cache"/>
+      <excludeFolder url="file://$MODULE_DIR$/var/cache"/>
+      <excludeFolder url="file://$MODULE_DIR$/pub/static"/>
+      <excludeFolder url="file://$MODULE_DIR$/dev"/>
+      <excludeFolder url="file://$MODULE_DIR$/bin"/>
+    </content>
+  </component>
+</module>

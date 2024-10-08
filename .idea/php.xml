@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter name="local-cma-project:m2TestUpdate-1728391275" id="2fbe75d5-bc8f-4adb-8e62-ddb0ccee6428" home="docker://DATA" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_IMAGE_NAME="local-cma-project:m2TestUpdate-1728391275" DOCKER_REMOTE_PROJECT_PATH="/home/almir/m2TestUpdate"/>
+      </interpreter>
+    </interpreters>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
+    <option name="suggestChangeDefaultLanguageLevel" value="8.2"/>
+  </component>
+</project>

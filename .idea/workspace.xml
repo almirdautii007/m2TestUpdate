@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MessDetectorProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER"/>
+  </component>
+  <component name="PHPCSFixerProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER"/>
+  </component>
+  <component name="PHPCodeSnifferProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER"/>
+  </component>
+  <component name="PhpStanProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER"/>
+  </component>
+  <component name="PsalmProjectConfiguration">
+    <option name="selectedConfigurationId" value="DEFAULT_INTERPRETER"/>
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" ignore_connections_through_unregistered_servers="true">
+    <xdebug_debug_ports port="9003"/>
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="http://localhost" name="create-magento-app" use_path_mappings="true">
+        <id>7e16e907-9ce3-4559-9d26-a30a5650d11f</id>
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/home/almir/m2TestUpdate"/>
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="local-cma-project:m2TestUpdate-1728391275"/>
+  <component name="RunManager">
+    <configuration name="create-magento-app" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="create-magento-app" session_id="PHPSTORM">
+      <method v="2"/>
+    </configuration>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myFormatOnlyChangedLines" value="true"/>
+    <option name="myRunOnSave" value="true"/>
+  </component>
+  <component name="PropertiesComponent">
+    <![CDATA[{"keyToString":{"RunOnceActivity.OpenProjectViewOnStart":"true","RunOnceActivity.ShowReadmeOnStart":"true"}}]]>
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <interpreter name="local-cma-project:m2TestUpdate-1728391275" composer="composer"/>
+    </execution>
+  </component>
+</project>
