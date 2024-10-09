@@ -72,3 +72,39 @@
 [2024-10-08T13:30:41.623447+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
 [2024-10-08T13:30:41.624079+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
 [2024-10-08T13:30:41.624412+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2024-10-09T08:50:46.791141+00:00] main.ERROR: Warning: class_implements(): Class Scandiweb\Test\Setup\Patch\Data\AddSimpleProduct does not exist and could not be loaded in /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php on line 43
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler()
+#1 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php(43): class_implements()
+#2 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/UpToDateData.php(73): Magento\Framework\Setup\Patch\PatchBackwardCompatability->isSkipableByDataSetupVersion()
+#3 /home/almir/m2TestUpdate/setup/src/Magento/Setup/Console/Command/DbStatusCommand.php(96): Magento\Framework\Setup\Patch\UpToDateData->isUpToDate()
+#4 /home/almir/m2TestUpdate/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\DbStatusCommand->execute()
+#5 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run()
+#6 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand()
+#7 /home/almir/m2TestUpdate/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun()
+#8 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun()
+#9 /home/almir/m2TestUpdate/bin/magento(23): Symfony\Component\Console\Application->run()
+#10 {main} [] []
+[2024-10-09T09:32:45.090618+00:00] main.ERROR: Warning: class_implements(): Class Scandiweb\Test\Setup\Patch\Data\AddSimpleProduct does not exist and could not be loaded in /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php on line 43
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler()
+#1 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php(43): class_implements()
+#2 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/UpToDateData.php(73): Magento\Framework\Setup\Patch\PatchBackwardCompatability->isSkipableByDataSetupVersion()
+#3 /home/almir/m2TestUpdate/setup/src/Magento/Setup/Console/Command/DbStatusCommand.php(96): Magento\Framework\Setup\Patch\UpToDateData->isUpToDate()
+#4 /home/almir/m2TestUpdate/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\DbStatusCommand->execute()
+#5 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run()
+#6 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand()
+#7 /home/almir/m2TestUpdate/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun()
+#8 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun()
+#9 /home/almir/m2TestUpdate/bin/magento(23): Symfony\Component\Console\Application->run()
+#10 {main} [] []
+[2024-10-09T09:36:22.278214+00:00] main.ERROR: Warning: class_implements(): Class Scandiweb\Test\Setup\Patch\Data\AddSimpleProduct does not exist and could not be loaded in /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php on line 43
+#0 [internal function]: Magento\Framework\App\ErrorHandler->handler()
+#1 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/PatchBackwardCompatability.php(43): class_implements()
+#2 /home/almir/m2TestUpdate/vendor/magento/framework/Setup/Patch/UpToDateData.php(73): Magento\Framework\Setup\Patch\PatchBackwardCompatability->isSkipableByDataSetupVersion()
+#3 /home/almir/m2TestUpdate/setup/src/Magento/Setup/Console/Command/DbStatusCommand.php(96): Magento\Framework\Setup\Patch\UpToDateData->isUpToDate()
+#4 /home/almir/m2TestUpdate/vendor/symfony/console/Command/Command.php(326): Magento\Setup\Console\Command\DbStatusCommand->execute()
+#5 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(1078): Symfony\Component\Console\Command\Command->run()
+#6 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(324): Symfony\Component\Console\Application->doRunCommand()
+#7 /home/almir/m2TestUpdate/vendor/magento/framework/Console/Cli.php(118): Symfony\Component\Console\Application->doRun()
+#8 /home/almir/m2TestUpdate/vendor/symfony/console/Application.php(175): Magento\Framework\Console\Cli->doRun()
+#9 /home/almir/m2TestUpdate/bin/magento(23): Symfony\Component\Console\Application->run()
+#10 {main} [] []

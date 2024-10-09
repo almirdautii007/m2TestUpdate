@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\Module\Patch;
+namespace Scandiweb\Test\Setup\Patch\Data;
 
 use Magento\Catalog\Api\CategoryLinkManagementInterface;
 use Magento\Catalog\Api\Data\ProductInterface;
@@ -13,7 +13,6 @@ use Magento\Catalog\Model\Product\Visibility;
 use Magento\Eav\Setup\EavSetup;
 use Magento\Framework\App\State;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\InventoryApi\Api\Data\SourceItemInterface;
@@ -22,25 +21,58 @@ use Magento\InventoryApi\Api\SourceItemsSaveInterface;
 
 /**
  * Class CreateGripTrainerProduct
- * @package Vendor\Module\Patch
+ * @package Scandiweb\Test\Setup\Patch\Data
  */
-class CreateGripTrainerProduct implements DataPatchInterface
+class AddSimpleProduct implements DataPatchInterface
 {
-    protected ModuleDataSetupInterface $setup;
+    /**
+     * @var ProductInterfaceFactory
+     */
     protected ProductInterfaceFactory $productInterfaceFactory;
+
+    /**
+     * @var ProductRepositoryInterface
+     */
     protected ProductRepositoryInterface $productRepository;
+
+    /**
+     * @var State
+     */
     protected State $appState;
+
+    /**
+     * @var EavSetup
+     */
     protected EavSetup $eavSetup;
+
+    /**
+     * @var StoreManagerInterface
+     */
     protected StoreManagerInterface $storeManager;
+
+    /**
+     * @var SourceItemInterfaceFactory
+     */
     protected SourceItemInterfaceFactory $sourceItemFactory;
+
+    /**
+     * @var SourceItemsSaveInterface
+     */
     protected SourceItemsSaveInterface $sourceItemsSaveInterface;
+
+    /**
+     * @var CategoryLinkManagementInterface
+     */
     protected CategoryLinkManagementInterface $categoryLink;
+
+    /**
+     * @var array
+     */
     protected array $sourceItems = [];
 
     /**
      * CreateGripTrainerProduct constructor.
      *
-     * @param ModuleDataSetupInterface $setup
      * @param ProductInterfaceFactory $productInterfaceFactory
      * @param ProductRepositoryInterface $productRepository
      * @param State $appState
@@ -51,7 +83,6 @@ class CreateGripTrainerProduct implements DataPatchInterface
      * @param CategoryLinkManagementInterface $categoryLink
      */
     public function __construct(
-        ModuleDataSetupInterface $setup,
         ProductInterfaceFactory $productInterfaceFactory,
         ProductRepositoryInterface $productRepository,
         State $appState,
@@ -61,7 +92,6 @@ class CreateGripTrainerProduct implements DataPatchInterface
         SourceItemsSaveInterface $sourceItemsSaveInterface,
         CategoryLinkManagementInterface $categoryLink
     ) {
-        $this->setup = $setup;
         $this->appState = $appState;
         $this->productInterfaceFactory = $productInterfaceFactory;
         $this->productRepository = $productRepository;
@@ -80,9 +110,7 @@ class CreateGripTrainerProduct implements DataPatchInterface
     public function apply(): void
     {
         // Use area emulation to avoid exceptions
-        $this->appState->emulateAreaCode('adminhtml', function () {
-            $this->execute();
-        });
+        $this->appState->emulateAreaCode('adminhtml', [$this, 'execute']);
     }
 
     /**
@@ -94,17 +122,23 @@ class CreateGripTrainerProduct implements DataPatchInterface
     {
         $sku = 'grip-trainer';
 
-        // Check if the product already exists by SKU
+        // Use area emulation to avoid exceptions
         try {
-            if ($this->productRepository->getIdBySku($sku)) {
-                return; // Skip if the product already exists
-            }
-        } catch (NoSuchEntityException $e) {
-            // Product does not exist, we can create it
+            $this->appState->setAreaCode('adminhtml');
+        } catch (\Magento\Framework\Exception\LocalizedException $e) {
+            // Area code is already set, no need to do anything
+        }
+
+        // Check if the product already exists by SKU using productInterfaceFactory
+        /** @var ProductInterface $product */
+        $product = $this->productInterfaceFactory->create();
+
+        // Attempt to get the product by SKU
+        if ($product->getIdBySku($sku)) {
+            return; // Skip if the product already exists
         }
 
         // Create the product
-        /** @var ProductInterface $product */
         $product = $this->productInterfaceFactory->create();
         $attributeSetId = $this->eavSetup->getAttributeSetId(Product::ENTITY, 'Default');
         $websiteId = $this->storeManager->getStore()->getWebsiteId();
@@ -120,7 +154,7 @@ class CreateGripTrainerProduct implements DataPatchInterface
             ->setStockData([
                 'use_config_manage_stock' => 1,
                 'is_in_stock' => 1,
-                'qty' => 100 
+                'qty' => 100,
             ]);
 
         // Save the product
@@ -146,20 +180,28 @@ class CreateGripTrainerProduct implements DataPatchInterface
      *
      * @return void
      */
+    /**
+     * Revert the data patch
+     *
+     * @return void
+     */
     public function revert(): void
     {
         $sku = 'grip-trainer';
 
-        // Remove the product if it exists
-        try {
-            if ($this->productRepository->getIdBySku($sku)) {
-                $product = $this->productRepository->getById($this->productRepository->getIdBySku($sku));
-                $this->productRepository->delete($product);
+        // Retrieve the product ID directly by SKU
+        $productId = $this->productRepository->getIdBySku($sku);
+
+        // If the product exists, delete it
+        if ($productId) {
+            try {
+                $this->productRepository->deleteById($productId);
+            } catch (NoSuchEntityException $e) {
+                // Product does not exist, nothing to delete
             }
-        } catch (NoSuchEntityException $e) {
-            // Product does not exist, nothing to revert
         }
     }
+
 
     /**
      * Get dependencies
