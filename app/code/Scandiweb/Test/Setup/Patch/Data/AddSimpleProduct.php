@@ -166,35 +166,7 @@ class AddSimpleProduct implements DataPatchInterface
         // Assign to category (adjust the category ID as needed)
         $this->categoryLink->assignProductToCategories($product->getSku(), [2]);
     }
-
-    /**
-     * Revert the data patch
-     *
-     * @return void
-     */
-    /**
-     * Revert the data patch
-     *
-     * @return void
-     */
-    public function revert(): void
-    {
-        $sku = 'grip-trainer';
-
-        // Retrieve the product ID directly by SKU
-        $productId = $this->productRepository->getIdBySku($sku);
-
-        // If the product exists, delete it
-        if ($productId) {
-            try {
-                $this->productRepository->deleteById($productId);
-            } catch (NoSuchEntityException $e) {
-                // Product does not exist, nothing to delete
-            }
-        }
-    }
-
-
+    
     /**
      * Get dependencies
      *
