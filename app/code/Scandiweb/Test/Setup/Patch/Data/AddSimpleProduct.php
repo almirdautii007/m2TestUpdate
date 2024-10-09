@@ -122,13 +122,6 @@ class AddSimpleProduct implements DataPatchInterface
     {
         $sku = 'grip-trainer';
 
-        // Use area emulation to avoid exceptions
-        try {
-            $this->appState->setAreaCode('adminhtml');
-        } catch (\Magento\Framework\Exception\LocalizedException $e) {
-            // Area code is already set, no need to do anything
-        }
-
         // Check if the product already exists by SKU using productInterfaceFactory
         /** @var ProductInterface $product */
         $product = $this->productInterfaceFactory->create();
