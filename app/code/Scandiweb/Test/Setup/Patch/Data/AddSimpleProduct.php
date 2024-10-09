@@ -132,7 +132,6 @@ class AddSimpleProduct implements DataPatchInterface
         }
 
         // Create the product
-        $product = $this->productInterfaceFactory->create();
         $attributeSetId = $this->eavSetup->getAttributeSetId(Product::ENTITY, 'Default');
         $websiteId = $this->storeManager->getStore()->getWebsiteId();
 
